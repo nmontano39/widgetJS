@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #333;  
+        top: 0;
+        left: 0;        
+        position: absolute;
+        width: 100%;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 8px 20px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .navbar a:hover {
+        background-color: rgb(162, 205, 255);
+        color: black;
+      }
+
+      .navbar a.active {
+        background-color: rgb(162, 205, 255);
+        color: black;
+      }
+
+      .navbar .icon {
+        display: none;
+      }
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 578px}
+      /* Set background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: rgb(162, 205, 255);
+        height: 100%;
+        margin-bottom: -100000px; /* any large number will do */
+        padding-bottom: 100000px;
+        overflow: hidden;
+        top: 8%;
+      }
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+    </style>
+
+    <title>Algorithmic Thinking</title>
+
+  </head>
+
+  <body>
+      <div class="container-fluid text-center"> 
+        <div class="row content">
+          
+
+          <div class="col-sm-3 sidenav">
+            
+          </div>
+
+
+          <div class="col-sm-6 text-left"> 
+              <br><br>
+              <br><br>
+
+            <div class="text-center">
+              <strong>
+                <font size=6>
+                  Algorithmic Thinking
+                </font>
+                </strong>
+            </div>
+            <hr>
+
+            <br>
+            <p>
+              Suppose you have a bag of red, yellow, and blue chips; the number of chips of each kind in the
+              bag is unknown. Consider a process where you repeatedly perform the following steps.
+              If only one chip remains in the bag, you take it out. Otherwise, you remove two chips at random.
+            </p>
+            
+            <p>
+              • If one of the two removed chips is red, you do not put any chips in the bag
+            </p>
+            <p>
+              • If both removed chips are yellow, you put <input id="1" class="text-center" type="number" style="width: 35px;" value=1> yellow chip(s) and <input id="2" class="text-center" type="number" style="width: 35px;" value=5> blue chip(s) in the bag
+            </p>
+            <p>
+              • If one of the chips is blue and the other is not red, you put <input id="3" class="text-center" type="number" style="width: 35px;" value=10> red chip(s) in the bag
+            </p>
+
+            <br>
+
+            <div class = "text-center">
+              <div class="btn-group" role="group" aria-label="Button group">
+                <input type="number" id="factVal" style="width: 40px;" value=10>
+                <button class="randBtn">Randomize</button>
+                <button class="solveBtn">></button>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div id="bagDisplay"> </div>
+
+            <div id="stepText"> </div>
+
+            
+            
+          </div>
+
+          <div class="col-sm-3 sidenav">
+            
+          </div>
+
+
+        </div>
+        <div class="navbar" id="myNavbar">
+            <a href="/nick/widget/tracUI.html">Calorie Tracker</a>
+            <a href="/nick/widget/loanUI.html">Loan Calculator</a>
+            <a href="/nick/widget/greedyUI.html">Greedy Algorithms</a>
+            <a class="active">Algorithmic Thinking</a>
+            <a href="/nick/widget/editUI.html">Levenshtein Distance</a>
+            <a href="/nick/widget/palUI.html">Metapalindrome Finder</a>
+        </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+              x.className += " responsive";
+            } else {
+              x.className = "navbar";
+            }
+          }
+        </script>
+      </div>
+      
+  
+    <!-- Optional JavaScript -->
+
+    <script src="algo.js"></script>
+    
+
+  </body>
+</html>

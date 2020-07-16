@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #333;  
+        top: 0;
+        left: 0;        
+        position: absolute;
+        width: 100%;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 8px 20px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .navbar a:hover {
+        background-color: rgb(230, 255, 183);
+        color: black;
+      }
+
+      .navbar a.active {
+        background-color: rgb(230, 255, 183);
+        color: black;
+      }
+
+      .navbar .icon {
+        display: none;
+      }
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 578px}
+      /* Set background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: rgb(230, 255, 183);
+        height: 100%;
+        margin-bottom: -100000px; /* any large number will do */
+        padding-bottom: 100000px;
+        overflow: hidden;
+        top: 8%;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+
+      p.fancy {
+        font-family: 'Courier New';
+      }
+    </style>
+
+    <title>Metapalindrome Finder</title>
+
+  </head>
+
+  <body>
+
+      <div class="container-fluid text-center"> 
+        <div class="row content">
+          
+          <div class="col-sm-3 sidenav">
+            
+
+          </div>
+
+          <div class="col-sm-6 text-left"> 
+            <br><br>
+            <br><br>
+            <div class="text-center">
+              <strong>
+                <font size=6>
+                    Metapalindrome Finder
+                </font>
+                </strong>
+            </div>
+            
+            <hr>
+            <br>
+
+            <p>
+              Find the length of the longest
+              contiguous substring that appears both forward and backward in an input
+              string. The forward and backward substrings must not be adjacent or overlap. For example:
+            </p>
+            <p>
+              • Given the input string <font color="red">R</font>ECU<font color="red">R</font>SION, the solution is  1
+            </p>
+            <p>
+              • Given the input string R<font color="red">EDI</font>V<font color="red">IDE</font>, the solution is  3
+            </p>
+            <p>
+              • Given the input string D<font color="red">YNAM</font>ICPROGRAMS<font color="red">MANY</font>TIMES, the solution is 4
+            </p>
+
+            <br><br>
+
+            <form id="loan-form">
+              <div class="form-group">
+                <div class="input-group text-center">
+                  <input type="text" class="form-control text-center" id="word" placeholder="Input String">
+                </div>
+              </div>
+            </form>
+
+            
+            <div class="text-center">
+              <input type="number" id="randVal" style="width: 40px;" value="10">
+              <button id="randBtn" style="width: 100px;">Randomize</button>
+              <button id="goBtn" style="width: 100px;">Go</button>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="text-center" id="solution">
+
+            </div>
+
+            <br>
+
+          </div>
+
+          <div class="col-sm-3 sidenav">
+          </div>
+
+        </div>
+
+        <div class="navbar" id="myNavbar">
+            <a href="/nick/widget/tracUI.html">Calorie Tracker</a>
+            <a href="/nick/widget/loanUI.html">Loan Calculator</a>
+            <a href="/nick/widget/greedyUI.html">Greedy Algorithms</a>
+            <a href="/nick/widget/algoUI.html">Algorithmic Thinking</a>
+            <a href="/nick/widget/editUI.html">Levenshtein Distance</a>
+            <a class="active">Metapalindrome Finder</a>
+        </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+              x.className += " responsive";
+            } else {
+              x.className = "navbar";
+            }
+          }
+        </script>
+      </div>
+  
+    <!-- Optional JavaScript -->
+    <script src="pal.js"></script>
+
+  </body>
+</html>

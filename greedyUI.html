@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #333;  
+        top: 0;
+        left: 0;        
+        position: absolute;
+        width: 100%;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 8px 20px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .navbar a:hover {
+        background-color: rgb(232, 182, 255);
+        color: black;
+      }
+
+      .navbar a.active {
+        background-color: rgb(232, 182, 255);
+        color: black;
+      }
+
+      .navbar .icon {
+        display: none;
+      }
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 578px}
+      /* Set background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color: rgb(232, 182, 255);
+        height: 100%;
+        margin-bottom: -100000px; /* any large number will do */
+        padding-bottom: 100000px;
+        overflow: hidden;
+        top: 8%;
+      }
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+
+      p.fancy {
+        font-family: 'Courier New';
+      }
+    </style>
+
+    <title>Greedy Algorithms</title>
+
+  </head>
+
+  <body>
+      <div class="container-fluid text-center"> 
+        <div class="row content">
+          
+          <div class="col-sm-3 sidenav">
+          </div>
+
+          <div class="col-sm-6 text-left"> 
+              <br><br>
+              <br><br>
+
+            <div class="text-center">
+              <strong>
+                <font size=6>
+                  Greedy Algorithms
+                </font>
+                </strong>
+            </div>
+            
+            <hr><br>
+            
+            <p>
+                In a previous life, you worked as a cashier in the lost Antarctican colony
+                of Nadiria. Because paper is a very rare and valuable resource in Antarctica,
+                cashiers were required by law to use the fewest bills possible whenever
+                they gave change. Thanks to the numerological predilections of one of its
+                founders, the currency of Nadiria, called Dream-Dollars, was available in
+                the following denominations: 
+            </p><br>
+
+            <div class="text-center" id=denoms>
+              <div class="thing0 text-center">
+                <input type="text" class="text-center" id="totVal" style="width: 20px;" value="$" readonly>
+                <input type="number" class="text-center" id="totVal0" style="width: 100px;" value="1">
+              </div>
+            </div>
+
+            
+            <br>
+            <div class="text-center">
+              <div class="btn-group" role="group" aria-label="Button group">
+              <button class="upBtn btn-gray">+</button>
+              <button class="downBtn btn-gray">-</button>
+            </div>
+            </div>
+            
+
+            <br><br><br>
+
+            <div class="text-center">
+              <input type="text" class="text-center" style="width: 20px;" value="$" readonly>
+              <input type="number" class="text-center" id="changeVal" style="width: 100px;" placeholder="0">
+              <button class="makeBtn">Make Change</button>
+            </div>
+
+            <br><br>
+
+            <div class="solution">
+                
+            </div>
+
+            
+
+          </div>
+
+          <div class="col-sm-3 sidenav">
+          </div>
+
+        </div>
+        <div class="navbar" id="myNavbar">
+            <a href="/nick/widget/tracUI.html">Calorie Tracker</a>
+            <a href="/nick/widget/loanUI.html">Loan Calculator</a>
+            <a class="active">Greedy Algorithms</a>
+            <a href="/nick/widget/algoUI.html">Algorithmic Thinking</a>
+            <a href="/nick/widget/editUI.html">Levenshtein Distance</a>
+            <a href="/nick/widget/palUI.html">Metapalindrome Finder</a>
+        </div>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+              x.className += " responsive";
+            } else {
+              x.className = "navbar";
+            }
+          }
+        </script>
+      </div>
+  
+    <!-- Optional JavaScript -->
+    <script src="greedy.js"></script>
+
+  </body>
+</html>
